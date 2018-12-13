@@ -1,0 +1,32 @@
+.navbar {
+  &__btn {
+    border-radius: 1.5rem;
+    min-width: 8rem;
+  }
+}
+
+.navbar-brand {
+  img {
+    height: 27px;
+
+    @include media-breakpoint-up(md) {
+      height: auto;
+    }
+  }
+}
+
+.navbar-collapse.show,
+.navbar-collapse.collapsing{
+  .navbar-nav {
+    padding-top: .9rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.nav-item {
+  & + & {
+    margin-left: 1.5rem;
+  }
+}

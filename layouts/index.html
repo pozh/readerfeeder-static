@@ -1,0 +1,60 @@
+<!doctype html>
+{{ $home := .Site.Data.home }}
+<html lang="en">
+{{ partial "head.html" }}
+<body id="top">
+{{ partial "navbar.html" }}
+<div class="main">
+
+    <div class="hero">
+        <div class="container">
+            <div class="hero__text">
+                <h1 class="hero__title">{{ $home.hero.title | markdownify }}</h1>
+                <h2 class="hero__caption">{{ $home.hero.caption | markdownify }}</h2>
+                <div class="hero__actions"><a class="btn btn-lg btn-primary hero__btn" href="{{ $home.hero.buttonLink }}">{{ $home.hero.buttonText }}</a></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section section-sm mt-5">
+        <div class="container">
+            <p class="section__prefix text-center">{{ $home.intro.top | markdownify }}</p>
+            <h2 class="section__title section__title narrow text-center">
+                {{ $home.intro.title | markdownify }}
+                <small>{{ $home.intro.caption | markdownify }}</small>
+            </h2>
+        </div>
+    </div>
+
+    <div class="section section-promo mt-5 mt-md-8">
+        <div class="container">
+
+            <h2 class="section__title text-center mb-5 mb-lg-7">{{ $home.details.title | markdownify }}</h2>
+
+            {{ range $home.details.list }}
+            <div class="promo-item">
+                <div class="promo-item__img">
+                    <img src="{{ .image }}" alt="{{ .title }}">
+                </div>
+                <div class="promo-item__text">
+                    <h2 class="promo-item__title">{{ .title | markdownify }}</h2>
+                    <p>{{ .text | markdownify }}</p>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+
+    <div class="section section-cta text-center mb-6">
+        <div class="container">
+            <h2 class="section__title">{{ $home.cta.title }}</h2>
+            <p class="mt-4"><a class="btn btn-lg btn-lg-cta" href="{{ $home.cta.buttonLink }}">{{ $home.cta.buttonText }}</a></p>
+            <small class="text-muted">{{ $home.cta.caption }}</small>
+        </div>
+    </div>
+
+</div>
+
+{{ partial "footer.html" . }}
+</body>
+</html>

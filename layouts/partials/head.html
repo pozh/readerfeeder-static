@@ -1,0 +1,26 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>{{ .Site.Title }}</title>
+    <meta property="og:title" content="{{ .Site.Title }}" />
+
+    {{- with .Description | default .Params.subtitle | default .Summary -}}
+    <meta name="description" content="{{ . }}">
+    <meta property="og:description" content="{{ . }}">
+    <meta name="twitter:description" content="{{ . | truncate 200 }}">
+    {{- end -}}
+
+    <meta name="author" content="{{ .Site.Author.name }}"/>
+
+    <meta property="og:url" content="{{ .URL | absLangURL }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
+    <link rel="canonical" href="{{ .URL | absLangURL }}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gentium+Basic:700|Open+Sans:400,600,700">
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon">
+    {{ $options := (dict "targetPath" "assets/styles/style.css" "outputStyle" "compressed" "enableSourceMap" false "includePaths" (slice "themes/simpleit/node_modules")) }}
+    {{ $style := resources.Get "sass/main.scss" | toCSS $options | postCSS | minify }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity={{ $style.Data.Integrity }}>
+</head>
