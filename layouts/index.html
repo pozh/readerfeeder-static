@@ -1,9 +1,9 @@
 <!doctype html>
 {{ $home := .Site.Data.home }}
 <html lang="en">
-{{ partial "head.html" }}
+{{ partial "head.html" . }}
 <body id="top">
-{{ partial "navbar.html" }}
+{{ partial "navbar.html" . }}
 <div class="main">
 
     <div class="hero">
