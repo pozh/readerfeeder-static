@@ -1,10 +1,3 @@
-.navbar {
-  &__btn {
-    border-radius: 1.5rem;
-    min-width: 8rem;
-  }
-}
-
 .navbar-brand {
   img {
     height: 27px;
@@ -26,7 +19,22 @@
 }
 
 .nav-item {
+  font-size: 15px;
+  font-weight: 600;
+
   & + & {
-    margin-left: 1.5rem;
+    margin-left: 1rem;
+  }
+
+  .nav-link {
+
+  }
+
+  .btn {
+    font-size: inherit;
+    font-weight: inherit;
+    padding: .5rem 1rem;
+    border-radius: 1.5rem;
+    min-width: 8rem;
   }
 }
