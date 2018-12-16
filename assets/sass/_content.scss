@@ -5,6 +5,12 @@ ol {
   font-size: 1.125rem;
 }
 
+// Images
+
+.img-fluid {
+  max-width: 100%;
+}
+
 // Buttons
 
 .btn-outline-secondary:hover {
@@ -23,8 +29,17 @@ ol {
 .page-title {
   @extend .mt-6;
   @extend .mb-7;
+
   &__title {
     text-align: center;
+  }
+
+  &_side {
+    @extend .mb-7;
+
+    .page-title__title {
+      text-align: left;
+    }
   }
 }
 
