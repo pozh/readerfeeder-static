@@ -58,14 +58,20 @@ $spacers: map-merge((
   2: ($spacer * .5),
   3: $spacer,
   4: ($spacer * 1.5),
-  5: ($spacer * 3),
-  6: ($spacer * 4),
-  7: ($spacer * 5),
-  8: ($spacer * 6),
+  5: ($spacer * 2),
+  6: ($spacer * 3),
+  7: ($spacer * 4),
+  8: ($spacer * 5),
+  9: ($spacer * 5),
 ), $spacers );
 
 
 // NavBar
+
+$navbar-light-color:                rgba($black, .7);
+$navbar-light-hover-color:          rgba($black, .9);
+$navbar-light-active-color:         $primary;
+$navbar-light-disabled-color:       rgba($black, .3);
 
 $navbar-toggler-padding-y:          .15rem;
 $navbar-toggler-padding-x:          .25rem;
