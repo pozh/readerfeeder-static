@@ -3,7 +3,7 @@
     "title": "Read RSS feeds while offline, in the sun!",
     "caption": "ReaderFeeder delivers articles from your favorite RSS feeds to your Kindle Paperwhite, wirelessly, in full-text format, so you can read them anywhere, even in the sun, thanks to Kindle's E-Ink screen!",
     "buttonText": "Try it free",
-    "buttonLink": "/app/signup"
+    "buttonLink": "/app/"
   },
   "intro": {
     "top": "ReaderFeeder - the best Kindle companion app",
@@ -16,12 +16,12 @@
       {
         "image": "/assets/images/signup.png",
         "title": "Sign up to ReaderFeeder",
-        "text": "It's free and will take a minute. [Click here](/app) to proceed with the registration process."
+        "text": "It's free and will take a minute. [Click here](/app/) to proceed with the registration process."
       },
       {
         "image": "/assets/images/discover.png",
         "title": "Discover Feeds",
-        "text": "Follow your favorite blogs, book authors, news sites. Everything you care about. Browse through our growing [rss feed collection](/app/feeds) and subscribe."
+        "text": "Follow your favorite blogs, book authors, news sites. Everything you care about. Browse through our growing [rss feed collection](/app/) and subscribe."
       },
       {
         "image": "/assets/images/read.png",
@@ -34,7 +34,7 @@
     "title": "Get started with ReaderFeeder today",
     "caption": "No credit card required",
     "buttonText": "Try it free",
-    "buttonLink": "/app/signup"
+    "buttonLink": "/app/"
   }
 
 }
