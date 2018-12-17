@@ -26,6 +26,10 @@ ol {
   @extend .btn-primary;
 }
 
+.main {
+  min-height: 55vh;
+}
+
 .page-title {
   @extend .mt-6;
   @extend .mb-7;

@@ -68,6 +68,7 @@ $spacers: map-merge((
 
 // NavBar
 
+$navbar-padding-y:                  $spacer * 1.6;
 $navbar-light-color:                rgba($black, .7);
 $navbar-light-hover-color:          rgba($black, .9);
 $navbar-light-active-color:         $primary;
